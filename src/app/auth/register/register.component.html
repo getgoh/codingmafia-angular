@@ -1,0 +1,55 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Sign Up</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+    <form class="example-form" [formGroup]="myForm" >
+      <mat-form-field class="example-full-width">
+        <input matInput type="email" placeholder="Email" formControlName="email">
+      </mat-form-field>
+    
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="First name" [(ngModel)]="firtName" formControlName="firstName" >
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Last Name" [(ngModel)]="lastName" formControlName="lastName"  >
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput type="password" placeholder="Password" required
+               formControlName="password">
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput type="password" placeholder="Confirm Password" required
+               formControlName="confirmPassword" >
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <table class="example-full-width" cellspacing="0">
+        <mat-radio-group>
+          <mat-radio-button value="nurse">Nurse</mat-radio-button>
+          <mat-radio-button value="patient">Patient</mat-radio-button>
+        </mat-radio-group>
+      </table>
+    </form>
+    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="register()" color="accent">Login</button>
+  </mat-card-actions>
+</mat-card>
