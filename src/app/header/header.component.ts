@@ -21,4 +21,8 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('/auth/register')
   }
 
+  patientClick() {
+    this.router.navigateByUrl('/patient')
+  }  
+
 }

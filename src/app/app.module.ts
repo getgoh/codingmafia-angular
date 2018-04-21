@@ -1,5 +1,5 @@
-import { appRouting } from './app.routing';
-import { AuthModule } from './auth/auth.module';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,9 +10,9 @@ import { MatToolbarModule, MatButtonModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
-
+import { appRouting } from './app.routing';
+import { AuthModule } from './auth/auth.module';
+import { PatientModule } from './patient/patient.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { HttpModule } from '@angular/http';
     MatButtonModule,
     HttpClientModule,
     HttpModule,
-    AuthModule
+    AuthModule,
+    PatientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
