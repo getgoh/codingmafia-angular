@@ -10,7 +10,16 @@ import { MatSnackBar } from '@angular/material';
 })
 export class RegisterComponent {
 
-  private myForm: FormGroup;
+  myForm: FormGroup;
+
+  firstName: String;
+  lastName: String;
+  showSpinner = true;
+
+  register()
+  {
+    // call service..
+  }
 
   constructor(private fb: FormBuilder, public snackBar: MatSnackBar) {
     this.myForm = fb.group({

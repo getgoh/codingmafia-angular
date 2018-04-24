@@ -12,6 +12,11 @@ export class LoginComponent {
   myForm: FormGroup;
   _message: String;
 
+  email: String;
+  password: String;
+
+  showSpinner = true;
+
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(){
