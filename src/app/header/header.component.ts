@@ -25,4 +25,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('/patient')
   }  
 
+  patientViewClick()
+  {
+    this.router.navigateByUrl('/patient/home')
+  }
+
 }

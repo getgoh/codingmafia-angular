@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const PATIENT_ROUTES: Routes = [
     { path: 'patient', redirectTo: '/patient/list', pathMatch: 'full' },
     { path: 'patient/list', component: ListComponent },
-    { path: 'patient/detail', component: DetailComponent },
+    { path: 'patient/detail/:id', component: DetailComponent },
     
 ]
 

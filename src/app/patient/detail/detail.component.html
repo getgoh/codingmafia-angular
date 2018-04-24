@@ -1,6 +1,13 @@
+
+<div class="button-container">
+  <button (click)="onBack()" style="max-width: 120px" mat-raised-button>Back</button>
+</div>
+
 <div class="example-container mat-elevation-z8">
   
-  <h3>Daniel Magalhaes</h3>
+  <div style="margin:20px">
+    <h2 class="mat-h2">{{currPatient}}</h2>
+  </div>
 
   <mat-table #table [dataSource]="dataSource">
 
@@ -9,8 +16,8 @@
 
     <!-- temperature Column -->
     <ng-container matColumnDef="temperature">
-      <mat-header-cell *matHeaderCellDef> temperature </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.temperature}} </mat-cell>
+      <mat-header-cell *matHeaderCellDef> Temperature </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.bodyTemperature}} </mat-cell>
     </ng-container>
 
     <!-- Heart Rate Column -->

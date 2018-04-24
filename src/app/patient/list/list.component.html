@@ -1,5 +1,8 @@
 <div class="example-container mat-elevation-z8">
-  <h3>Patient list</h3> 
+  <div style="margin: 20px">
+      <h2 class="mat-h2">Patient List</h2>
+  </div>
+  
   <mat-table #table [dataSource]="dataSource">
 
     <!--- Note that these columns can be defined in any order.
@@ -26,7 +29,11 @@
     <!-- Detail Column -->
     <ng-container matColumnDef="detail">
       <mat-header-cell *matHeaderCellDef> Detail </mat-header-cell>
-      <mat-cell *matCellDef="let element"> <button mat-button (click)="detailClick()" color="primary">Detail</button> </mat-cell>
+      <mat-cell *matCellDef="let element"> 
+        <!-- <a href='/patient/detail/{{element.id}}'> -->
+          <button (click)="detailClick(element.firstName)" mat-button color="primary">Detail</button> 
+        <!-- </a> -->
+      </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
